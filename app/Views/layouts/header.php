@@ -17,7 +17,11 @@
         <button type="button" class="btn-toggle-sidebar" aria-label="Toggle Navigation">☰</button>
         <h1 class="page-title"><?= htmlspecialchars($title ?? 'Dashboard') ?></h1>
       </div>
-      <div class="topbar-right">
+      <div class="topbar-right" style="display:flex;align-items:center;gap:12px;">
+        <a href="<?= BASE_URL ?>/" target="_blank" class="btn btn-primary btn-sm" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:600;padding:7px 14px;border-radius:8px;box-shadow:0 2px 6px rgba(14,165,233,0.3);" title="Buka Halaman Depan Website (Landing Page)">
+          <span>🌐</span>
+          <span>Lihat Website</span>
+        </a>
         <span class="badge badge-success">● Server Online (Port 3306)</span>
         <a href="<?= BASE_URL ?>/index.php?c=auth&m=logout" class="btn btn-outline btn-sm">Keluar</a>
       </div>
@@ -28,4 +32,3 @@
           <strong>Info:</strong> <?= htmlspecialchars($flash['message']) ?>
         </div>
       <?php endif; ?>
-
